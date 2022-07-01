@@ -3,5 +3,23 @@
   <title>Currency Exchanger</title>
 </head>
 <body>
+  <div class="container">
+    <form id="formOne">
+      <h1>Get Any Currency From Anywhere!</h1>
+      <label for="USInput">Enter a U.S. $ Amount:</label>
+      <input id="USInput" type="text">
+        <br>
+        <h2>Please Select Your Currency</h2>
+        <div class="form-group"> <label for="moneyTypes">Currency Types:</label>
+          <select class="form-control" id="moneyTypes">
+            <option>--</option>
+            <option>AED</option>
+            <option>*</option>
+          </select>
+        </div>
+      <button class="btn-success" id="US-converter">Convert Currency</button>
+    </form>
+    <div class="showError"></div>
+    <div class="output"></div>
 </body>
 </html>
