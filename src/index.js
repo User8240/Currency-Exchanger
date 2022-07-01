@@ -13,17 +13,35 @@ $(document).ready(function() {
     promise.then(function (response) {
       let outputString = "";
       const body = JSON.parse(response);
-      console.log(response);
-      console.log(body);
-
       let outputAED = body.conversion_rates.AED;
-      console.log(outputAED);
-
+      let outputCAD = body.conversion_rates.CAD;
+      let outputEUR = body.conversion_rates.EUR;
+      let outputMXN = body.conversion_rates.MXN;
+      let outputCNY = body.conversion_rates.CNY;
       if (moneyType === "AED") {
         outputString = USInput * outputAED;
-
         $(".output").html(
-          `<p>"${outputString}" AED</p>`
+          `<p>$${outputString} AED</p>`
+        );
+      } else if (moneyType === "CAD") {
+        outputString = USInput * outputCAD;
+        $(".output").html(
+          `<p>$${outputString} CAD</p>`
+        );
+      } else if (moneyType === "EUR") {
+        outputString = USInput * outputEUR;
+        $(".output").html(
+          `<p>$${outputString} EUR</p>`
+        );
+      } else if (moneyType === "MXN") {
+        outputString = USInput * outputMXN;
+        $(".output").html(
+          `<p>$${outputString} MXN</p>`
+        );
+      } else if (moneyType === "CNY") {
+        outputString = USInput * outputCNY;
+        $(".output").html(
+          `<p>$${outputString} CNY</p>`
         );
       } else {
         $(".output").text(
