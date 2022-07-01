@@ -1,7 +1,7 @@
 {
   "name": "currency_exchanger",
   "version": "1.0.0",
-  "description": "*",
+  "description": "This webpage will convert U.S. dollars into 5 different currencies!",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",
