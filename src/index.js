@@ -30,13 +30,12 @@ $(document).ready(function() {
           `That currency is not in this data base`
         );
       }
-    }),
-    function (error) {
-      console.log(error);
+    },
+    function(error) {
       $(".showError").text(
         `There was an error processing your request; ${error}`
       );
-    };
+    });
   });
 });
 
